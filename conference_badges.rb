@@ -15,12 +15,10 @@ def assign_rooms(attendees)
   attendees.each_with_index do |value, index|
     puts "#{index}: #{value}"
 
- describe '#assign_rooms' do
-
-    # Question 3
-
-    it 'should return a list of welcome messages and room assignments' do
-      expect(assign_rooms(attendees)).to eq(room_assignments)
-    end
-
+def assign_rooms(attendees)
+  room_assignments = []
+  attendees.each_with_index do |name, number|
+    room_assignments.push("Hello, #{name}! You'll be assigned to room #{number+1}!")
   end
+  room_assignments
+end
